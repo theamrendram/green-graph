@@ -340,20 +340,19 @@ function App() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              size="lg"
-              className="bg-green-600 hover:bg-green-700 transition-all duration-300 hover:scale-105">
-              <Download className="w-4 h-4 mr-2" />
-              Install Now
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="hover:bg-green-50 transition-all duration-300 bg-transparent">
+            <Link
+              href="https://www.npmjs.com/package/@theamrendram/react-green-graph"
+              className="flex items-center gap-2 text-sm hover:text-green-600 transition-colors">
+              <ExternalLink className="w-4 h-4 mr-2" />
+              Go to npm
+            </Link>
+            <Link
+              href="https://github.com/theamrendram/react-green-graph"
+              className="flex items-center gap-2 text-sm hover:text-green-600 transition-colors">
               <Github className="w-4 h-4 mr-2" />
               View on GitHub
               <ArrowRight className="w-4 h-4 ml-2" />
-            </Button>
+            </Link>
           </div>
         </div>
       </section>
@@ -370,20 +369,26 @@ function App() {
             </div>
 
             <div className="flex items-center gap-6 text-sm text-gray-600">
-              <Link href="#" className="hover:text-green-600 transition-colors">
+              <Link
+                href="https://github.com/theamrendram/react-green-graph/blob/main/README.md"
+                className="hover:text-green-600 transition-colors">
                 Documentation
               </Link>
-              <Link href="#" className="hover:text-green-600 transition-colors">
+              <Link
+                href="https://github.com/theamrendram/react-green-graph"
+                className="hover:text-green-600 transition-colors">
                 Examples
               </Link>
-              <Link href="#" className="hover:text-green-600 transition-colors">
+              <Link
+                href="https://github.com/theamrendram/react-green-graph"
+                className="hover:text-green-600 transition-colors">
                 Support
               </Link>
             </div>
           </div>
 
           <div className="mt-8 pt-8 border-t text-center text-sm text-gray-500">
-            <p>© 2024 @theamrendram/react-green-graph. MIT License.</p>
+            <p>© {new Date().getFullYear()} @theamrendram/react-green-graph. MIT License.</p>
           </div>
         </div>
       </footer>
