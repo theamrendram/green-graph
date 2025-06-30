@@ -24,6 +24,7 @@ import {
   ExternalLink,
 } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function HomePage() {
   const [copied, setCopied] = useState(false);
@@ -86,23 +87,26 @@ export default function HomePage() {
       <header className="sticky top-0 z-50 w-full border-b bg-white/80 backdrop-blur-md">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-green-600 rounded-lg flex items-center justify-center">
-              <Code2 className="w-5 h-5 text-white" />
+            <div className="flex items-center justify-center">
+              <Image
+                src="/react-green-graph.png"
+                alt="react-green-graph"
+                width={50}
+                height={50}
+              />
             </div>
-            <span className="font-bold text-xl">react-green-graph</span>
+            <span className="font-semibold text-xl">React Green Graph</span>
           </div>
           <div className="flex items-center gap-4">
             <Link
               href="https://github.com/theamrendram/react-green-graph"
               className="flex items-center gap-2 text-sm hover:text-green-600 transition-colors">
               <Github className="w-4 h-4" />
-              GitHub
             </Link>
             <Link
               href="https://www.npmjs.com/package/@theamrendram/react-green-graph"
               className="flex items-center gap-2 text-sm hover:text-green-600 transition-colors">
               <ExternalLink className="w-4 h-4" />
-              npm
             </Link>
           </div>
         </div>
@@ -142,7 +146,7 @@ export default function HomePage() {
             </div>
             <Button
               size="lg"
-              className="bg-green-600 hover:bg-green-700 transition-all duration-300 hover:scale-105">
+              className="bg-gradient-to-t from-green-300 via-green-400 to-emerald-600 text-green-950 hover:text-green-950 transition-all duration-300 hover:scale-105">
               <Download className="w-4 h-4 mr-2" />
               Get Started
             </Button>
@@ -150,7 +154,7 @@ export default function HomePage() {
 
           {/* Stats */}
           <div className="flex justify-center gap-8 text-center animate-in slide-in-from-bottom-4 duration-1000 delay-600">
-            <div className="flex flex-col">
+            {/* <div className="flex flex-col">
               <span className="text-2xl font-bold text-green-600">
                 {stats.downloads.toLocaleString()}
               </span>
@@ -165,7 +169,14 @@ export default function HomePage() {
             <div className="flex flex-col">
               <span className="text-2xl font-bold text-green-600">0</span>
               <span className="text-sm text-gray-500">Dependencies</span>
-            </div>
+            </div> */}
+
+            <Link
+              href="https://github.com/theamrendram/react-green-graph"
+              className="flex items-center gap-2 text-sm bg-gradient-to-t from-green-300 via-green-400 to-emerald-600 hover:text-green-950 transition-colors rounded-lg px-4 py-2">
+              <Github className="w-4 h-4" />
+              Star on GitHub
+            </Link>
           </div>
         </div>
       </section>
@@ -362,8 +373,13 @@ function App() {
         <div className="container mx-auto px-4 py-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center gap-2 mb-4 md:mb-0">
-              <div className="w-6 h-6 bg-green-600 rounded flex items-center justify-center">
-                <Code2 className="w-4 h-4 text-white" />
+              <div className="flex items-center justify-center">
+                <Image
+                  src="/react-green-graph.png"
+                  alt="react-green-graph"
+                  width={50}
+                  height={50}
+                />
               </div>
               <span className="font-semibold">react-green-graph</span>
             </div>
@@ -388,7 +404,10 @@ function App() {
           </div>
 
           <div className="mt-8 pt-8 border-t text-center text-sm text-gray-500">
-            <p>© {new Date().getFullYear()} @theamrendram/react-green-graph. MIT License.</p>
+            <p>
+              © {new Date().getFullYear()} @theamrendram/react-green-graph. MIT
+              License.
+            </p>
           </div>
         </div>
       </footer>
